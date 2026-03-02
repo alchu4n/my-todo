@@ -1,0 +1,129 @@
+.inputCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  margin-bottom: 44px;
+  transition: border-color 0.2s;
+  overflow: hidden;
+}
+
+.inputCard:focus-within {
+  border-color: rgba(200, 169, 110, 0.35);
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  padding: 18px 20px;
+  gap: 14px;
+}
+
+.plus {
+  font-size: 22px;
+  line-height: 1;
+  color: var(--text-dim);
+  transition: color 0.2s;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.inputCard:focus-within .plus {
+  color: var(--gold);
+}
+
+.taskInput {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.taskInput::placeholder {
+  color: var(--text-dim);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  padding: 9px 20px;
+  gap: 8px;
+  border-top: 1px solid var(--border);
+  background: var(--surface-2);
+}
+
+.pillBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 2px;
+  border: 1px solid var(--border-light);
+  background: none;
+  color: var(--text-muted);
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.pillBtn:hover {
+  border-color: var(--text-muted);
+  color: var(--text);
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--text-dim);
+}
+
+.pillBtn.high {
+  border-color: rgba(190, 89, 89, 0.35);
+  color: var(--red);
+}
+.pillBtn.high .dot {
+  background: var(--red);
+}
+
+.pillBtn.medium {
+  border-color: rgba(192, 139, 85, 0.35);
+  color: var(--amber);
+}
+.pillBtn.medium .dot {
+  background: var(--amber);
+}
+
+.pillBtn.low {
+  border-color: rgba(90, 148, 112, 0.35);
+  color: var(--green);
+}
+.pillBtn.low .dot {
+  background: var(--green);
+}
+
+.catWrap {
+  position: relative;
+}
+
+.hint {
+  margin-left: auto;
+  font-size: 9px;
+  color: var(--text-dim);
+  letter-spacing: 0.06em;
+}
+
+.hint kbd {
+  background: var(--border-light);
+  padding: 1px 5px;
+  border-radius: 2px;
+  font-family: inherit;
+}

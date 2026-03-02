@@ -1,0 +1,133 @@
+.taskItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+  animation: slideDown 0.28s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.taskItem.removing {
+  animation: slideOut 0.22s ease forwards;
+  overflow: hidden;
+}
+
+.check {
+  width: 17px;
+  height: 17px;
+  border: 1px solid var(--border-light);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.check:hover {
+  border-color: var(--gold);
+}
+
+.check.on {
+  background: var(--gold-dim);
+  border-color: rgba(200, 169, 110, 0.5);
+}
+
+.check.on::after {
+  content: '✓';
+  font-size: 9px;
+  color: var(--gold);
+}
+
+.taskBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.taskText {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.55;
+  color: var(--text);
+  word-break: break-word;
+  transition: color 0.3s;
+}
+
+.done .taskText {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.taskMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.metaTag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.metaDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+
+.metaTime {
+  font-size: 8px;
+  color: var(--text-dim);
+  letter-spacing: 0.06em;
+}
+
+/* Priority colors */
+.high .prio  { color: var(--red); }
+.high .metaDot { background: var(--red); }
+.medium .prio { color: var(--amber); }
+.medium .metaDot { background: var(--amber); }
+.low .prio   { color: var(--green); }
+.low .metaDot { background: var(--green); }
+
+.metaCat {
+  color: var(--text-dim);
+}
+
+.taskActions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  flex-shrink: 0;
+}
+
+.taskItem:hover .taskActions {
+  opacity: 1;
+}
+
+.actBtn {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  padding: 2px 4px;
+  transition: color 0.15s;
+}
+
+.actBtn:hover {
+  color: var(--text);
+}
+
+.del:hover {
+  color: var(--red);
+}

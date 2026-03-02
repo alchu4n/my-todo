@@ -1,0 +1,20 @@
+.empty {
+  text-align: center;
+  padding: 72px 0;
+}
+
+.glyph {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 96px;
+  line-height: 1;
+  color: var(--surface-2);
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+}
+
+.sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text-dim);
+}
